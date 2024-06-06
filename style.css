@@ -15,18 +15,15 @@ nav{
 nav ul{
     
     list-style: none;
-    display: inline;
-   
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 20px;
 }
 
 nav ul li{
     
-    display: inline;
+    /* display: inline; */
     
 }
 
@@ -40,6 +37,17 @@ a:active{
 }
 
 /* sub header *********************************/
+
+.iconbar{
+   
+    border: 1px solid red;
+    display: block;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 30px;
+    
+    
+}
 
 .sub-header{
     background-image: url("images/Rectangle\ 48.png");
@@ -62,7 +70,7 @@ a:active{
 }
 
 .red-btn{
-    background-color: red;
+    background-color: tomato;
 }
 
 .trans-btn{
@@ -88,12 +96,33 @@ button{
 
 .phone img{
     position: absolute;
-    top: -300px;
+    top: -150px;
+}
+.hr{
+    margin: 600px auto 50px auto; 
+    width: 50%;
+}
+.hrm{
+    margin: 50px auto 50px auto; 
+    width: 90%;
+    display: none;
+
+}
+.h2b{
+    text-align: center;
+    font-size: 44px;
+    font-weight: 600;
+    color: rgb(27, 27, 27);
 }
 
 /* create account section ************************************************************/
 
 .section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-inverse{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,16 +186,51 @@ footer{
     color: tomato;
 }
 
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+
 
 
 @media (max-width:576px){
 
     /* nav section******************* */
+    nav{
+        position: relative;
+    }
+    nav ul{
+        flex-direction: column;
+        display: nonee;
+        background-color: darkslategray;
+        position: absolute;
+        top: 100px;
+        right: 5px;
+        height: 70vh;
+        width: 95%;
+        justify-content: flex-start;
+        gap: 80px;
+        padding-top: 30px;
+    }
+    nav ul a{
+        color: beige;
+        font-weight: 700;
+        font-size: 20px;
+    }
 
     /* Subheader section */
+    .d-block{
+        display: none;
+    }
+    .d-none{
+        display: block;
+    }
+
     .sub-header{
         background-image: none;
-        height: 90vh;
+        height: 120vh;
     }
     .center{
         gap: 40px;
@@ -175,13 +239,126 @@ footer{
     
     .lite-black{
         color: rgb(82, 81, 81);
+        font-size: 35px;
+    }
+    .lite-p{
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(82, 81, 81);
+
     }
     .bold{
-        font-weight: 900;
+        font-weight: 800;
+        font-size: 50px;
     }
+
     .br{
         display: none;
     }
+
+    .phone{
+        position: static;
+    }
+    .phone img{
+        position: static;
+        /* border: 2px solid red; */
+        width: 95%;
+        
+    }
+    
+    
+    .btn button{
+        display: block;
+        margin-top: 20px;
+        width: 70vw;
+        height: 80px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .trans-btn{
+        color: tomato;
+        border: 1px solid tomato;
+        
+    }
+
+    .hr{
+        display: none;
+    }
+    .hrm{
+        display: block;
+    }
+    .h2b{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: rgb(27, 27, 27);
+    }
+
+    /* ********* create acc section*/
+    .section{
+        flex-direction: column-reverse;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+    .section-inverse{
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    .right{
+        text-align: center;
+        gap: 60px;
+    }
+
+    .p-tomato{
+        font-weight: bold;
+        color: tomato;
+        font-size: 35px;
+    }
+    
+    .h2-text{
+        font-size: 50px;
+    
+    }
+    .p-text{
+        color: rgb(77, 75, 75);
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    br{
+        display: none;
+    }
+
+    /********** Download section*********************************** */
+
+    .down-layer{
+        background-image: none;
+        background-color: rgb(29, 24, 36);
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 100px;
+        gap: 30px;
+    }
+
+    .d-no{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 20px;
+    }
+
+    .icons{
+        font-size: 40px;
+    }
+
+    
 
 
 }
