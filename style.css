@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+/********** nav secion ************************************************************************/
+nav{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+nav ul{
+    
+    list-style: none;
+    display: inline;
+   
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+nav ul li{
+    
+    display: inline;
+    
+}
+
+nav li a{
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+a:active{
+    color: tomato;
+}
+
+/* sub header *********************************/
+
+.sub-header{
+    background-image: url("images/Rectangle\ 48.png");
+    height: 80vh;
+}
+
+.center{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    color:beige;
+}
+
+.inline-btn{
+    display: inline;
+}
+
+.red-btn{
+    background-color: red;
+}
+
+.trans-btn{
+    background: none;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    color: aliceblue;
+
+}
+
+/************ Main content **********************************************************/
+
+.phone{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone img{
+    position: absolute;
+    top: -300px;
+}
+
+/* create account section ************************************************************/
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acc-left{
+
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.p-tomato{
+    font-weight: bold;
+    color: tomato;
+}
+
+.h2-text{
+
+}
+.p-text{
+    color: rgb(77, 75, 75);
+}
+
+/* Varieties Section ******************************************************/
+
+
+/* ************************************************************************ */
+
+/* checkout *************************************************************** */
+.checkout{
+    
+}
+
+.down-layer{
+    background-image: url("images/Rectangle 47.png");
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    font-size: 30px;
+    color: tomato;
+}
+
+
+
+@media (max-width:576px){
+
+    /* nav section******************* */
+
+    /* Subheader section */
+    .sub-header{
+        background-image: none;
+        height: 90vh;
+    }
+    .center{
+        gap: 40px;
+        color: black;
+    }
+    
+    .lite-black{
+        color: rgb(82, 81, 81);
+    }
+    .bold{
+        font-weight: 900;
+    }
+    .br{
+        display: none;
+    }
+
+
+}
+
+
+
+
