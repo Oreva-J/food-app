@@ -8,32 +8,54 @@
 /********** nav secion ************************************************************************/
 nav{
     display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    background-color: whitesmoke;
 }
 
-nav ul{
-    
-    list-style: none;
-    width: 40%;
+.logo{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 700;
+
+}
+
+
+.nav-links{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-nav ul li{
-    
-    /* display: inline; */
+    list-style: none;
+    width: 50%;
     
 }
-
-nav li a{
-    color: rgb(51, 51, 51);
+.nav-links li{
+    
+    
+}
+.nav-links li a{
     text-decoration: none;
+    color: black;
+}
+.nav-links a:hover{
+    color: gray;
+    transform: translateY(5px);
 }
 
-a:active{
+.nav-links a.active{
     color: tomato;
+}
+
+.ham div{
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.ham{
+    cursor: pointer;
+    display: none;
 }
 
 /* sub header *********************************/
@@ -70,11 +92,20 @@ a:active{
 }
 
 .red-btn{
-    background-color: tomato;
+    background-color: rgb(243, 46, 11);
+    
 }
 
 .trans-btn{
     background: none;
+}
+
+.red-btn:hover,.trans-btn:hover{
+    opacity: 80%;
+}
+
+.red-btn:focus, .trans-btn:focus{
+    opacity: 50%;
 }
 
 button{
@@ -83,6 +114,10 @@ button{
     border-radius: 50px;
     color: aliceblue;
 
+}
+.lite-p{
+    font-size: 22px;
+    font-weight: 500;
 }
 
 /************ Main content **********************************************************/
@@ -196,29 +231,84 @@ footer{
 
 
 @media (max-width:576px){
+    body{
+        overflow-x: hidden;
+    }
 
     /* nav section******************* */
-    nav{
-        position: relative;
+    .ham{
+        display: block;
     }
-    nav ul{
+    /* nav link list mobile style declaration */
+    .nav-links{
         flex-direction: column;
-        display: nonee;
-        background-color: darkslategray;
         position: absolute;
         top: 100px;
-        right: 5px;
-        height: 70vh;
-        width: 95%;
-        justify-content: flex-start;
-        gap: 80px;
-        padding-top: 30px;
-    }
-    nav ul a{
+        right: 0;
+        width: 50%;
+        background-color: #19251f;
         color: beige;
-        font-weight: 700;
-        font-size: 20px;
+        height: 60vh;
+        justify-content: start;
+        align-items: center;
+        gap: 40px;
+        padding-top: 20px;
+        transform: translateX(100%);
+        transition: 0.5s ease-out;
     }
+    .nav-links li a{
+        color: beige;
+        padding: 0 25px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links a:hover{
+        color: gray;
+        transform: translateY(5px);
+        font-size: 16px;
+    }
+    
+    .nav-links a.active{
+        color:cyan;
+        font-weight: 800;
+    }
+
+    /* toggle class to call back the link list */
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+
+    /* Fade in list link animation using keyFrames linked to app.js */
+    .nav-links li{
+        opacity: 0px;
+    }
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translate(0px);
+        }
+
+    }
+
+    /* Ham menu toggle X */
+    .toggle .bar1{
+        transform: rotate(-45deg) translate(-7px,7px);
+    }
+    .toggle .bar2{
+        opacity: 0;
+    }
+    .toggle .bar3{
+        transform: rotate(45deg) translate(-7px,-7px);
+    }
+
+/* -----------------------NAV END-------------------------------------- */
+    
 
     /* Subheader section */
     .d-block{
@@ -230,16 +320,17 @@ footer{
 
     .sub-header{
         background-image: none;
-        height: 120vh;
+        height: 70vh;
     }
     .center{
-        gap: 40px;
+        gap: 20px;
         color: black;
+        padding-top: 30px;
     }
     
     .lite-black{
         color: rgb(82, 81, 81);
-        font-size: 35px;
+        font-size: 25px;
     }
     .lite-p{
         font-size: 25px;
@@ -249,7 +340,7 @@ footer{
     }
     .bold{
         font-weight: 800;
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .br{
@@ -258,11 +349,13 @@ footer{
 
     .phone{
         position: static;
+        margin-top: 0px;
+        width: 100%;
     }
     .phone img{
         position: static;
-        /* border: 2px solid red; */
-        width: 95%;
+        width: 90%;
+        
         
     }
     
@@ -270,10 +363,11 @@ footer{
     .btn button{
         display: block;
         margin-top: 20px;
-        width: 70vw;
-        height: 80px;
+        width: 30vw;
+        height: 50px;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 20px;
+        border-radius: 25px;
     }
     .trans-btn{
         color: tomato;
@@ -315,16 +409,16 @@ footer{
     .p-tomato{
         font-weight: bold;
         color: tomato;
-        font-size: 35px;
+        font-size: 30px;
     }
     
     .h2-text{
-        font-size: 50px;
+        font-size: 40px;
     
     }
     .p-text{
         color: rgb(77, 75, 75);
-        font-size: 40px;
+        font-size: 30px;
         margin-left: 20px;
         margin-right: 20px;
     }

@@ -1,0 +1,47 @@
+<nav>
+            <img src="images/left.png" alt="">
+            <ul id="menu">
+                <li><a style="color: tomato;" href="#">Home</a></li>
+                <li><a href="#Product">Product</a></li>
+                <li><a href="#Faq">Faq</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            
+            <a class="iconbar d-none" href=""><i class="fa-solid fa-bars"></i></a>
+           
+        </nav>
+
+
+
+style.css------------------------------------------
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+nav ul{
+    
+    list-style: none;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    
+    /* display: inline; */
+    
+}
+
+nav li a{
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+a:active{
+    color: tomato;
+}
